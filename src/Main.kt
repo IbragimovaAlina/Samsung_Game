@@ -63,190 +63,107 @@ class Knight(Health:Int, Power:Int, var Defence:Int, who: who):Human(Health, Pow
     }
 }
 
-fun main() {
+fun main(){
     println("Какого персонажа хотите создать(Маг, робот, рыцарь)?")
     var who1 = '3'
-    var whooo: String? = readLine()
-    if (whooo == "Маг") {
-        who1 = '1'
-    } else if (whooo == "Робот") {
-        who1 = '2'
-    } else if (whooo == "Рыцарь") {
-        who1 = '3'
-    }
-    lateinit var first: Human
-    when (who1) {
-        '1' -> {
-            println("Создаем мага!");
-            println("Введите здоровье: ");
-            var a: Int = readLine()!!.toInt()
-            println("Введите силу атаки: ");
-            var b: Int = readLine()!!.toInt()
-            println("Введите ману: ");
-            var c: Int = readLine()!!.toInt()
-            first = Wizard(a, b, c, who.WIZARD)
-        }
-
-        '2' -> {
-            println("Создаем робота!");
-            println("Введите здоровье: ");
-            var a1: Int = readLine()!!.toInt()
-            println("Введите силу атаки: ");
-            var b1: Int = readLine()!!.toInt()
-            println("Введите батарею: ");
-            var c1: Int = readLine()!!.toInt()
-            first = Robot(a1, b1, c1, who.ROBOT)
-        }
-
-        '3' -> {
-            println("Создаем рыцаря!");
-            println("Введите здоровье: ");
-            var a2: Int = readLine()!!.toInt()
-            println("Введите силу атаки: ");
-            var b2: Int = readLine()!!.toInt()
-            println("Введите защиту: ");
-            var c2: Int = readLine()!!.toInt()
-            first = Knight(a2, b2, c2, who.KNIGHT)
-        }
+    var whooo:String? = readLine()
+    if (whooo=="Маг" || whooo=="маг"){who1 = '1'}
+    else if (whooo=="Робот" || whooo=="робот"){who1 = '2'}
+    else if (whooo=="Рыцарь" || whooo=="рыцарь"){who1 = '3'}
+    lateinit var first:Human
+    when(who1){
+        '1' -> {println("Создаем мага!");
+            println("Введите здоровье: ");var a :Int = readLine()!!.toInt()
+            println("Введите силу атаки: ");var b :Int = readLine()!!.toInt()
+            println("Введите ману: ");var c :Int = readLine()!!.toInt()
+            first = Wizard(a,b,c, who.WIZARD)}
+        '2' -> {println("Создаем робота!");
+            println("Введите здоровье: ");var a1 :Int = readLine()!!.toInt()
+            println("Введите силу атаки: ");var b1 :Int = readLine()!!.toInt()
+            println("Введите батарею: ");var c1 :Int = readLine()!!.toInt()
+            first = Robot(a1,b1,c1, who.ROBOT)}
+        '3' -> {println("Создаем рыцаря!");
+            println("Введите здоровье: ");var a2 :Int = readLine()!!.toInt()
+            println("Введите силу атаки: ");var b2 :Int = readLine()!!.toInt()
+            println("Введите защиту: ");var c2 :Int = readLine()!!.toInt()
+            first = Knight(a2,b2,c2, who.KNIGHT)}
     }
     println("-------------------");
     println("Какого персонажа хотите создать(Маг, робот, рыцарь)?")
     var who1_1 = '3'
-    var whooo_1: String? = readLine()
-    if (whooo_1 == "Маг") {
-        who1_1 = '1'
-    };
-    else if (whooo_1 == "Робот") {
-        who1_1 = '2'
-    };
-    else if (whooo_1 == "Рыцарь") {
-        who1_1 = '3'
-    };
-    lateinit var second: Human
-    when (who1_1) {
-        '1' -> {
-            println("Создаем мага!");
-            println("Введите здоровье: ");
-            var a: Int = readLine()!!.toInt()
-            println("Введите силу атаки: ");
-            var b: Int = readLine()!!.toInt()
-            println("Введите ману: ");
-            var c: Int = readLine()!!.toInt()
-            second = Wizard(a, b, c, who.WIZARD)
-        }
-
-        '2' -> {
-            println("Создаем робота!");
-            println("Введите здоровье: ");
-            var a1: Int = readLine()!!.toInt()
-            println("Введите силу атаки: ");
-            var b1: Int = readLine()!!.toInt()
-            println("Введите батарею: ");
-            var c1: Int = readLine()!!.toInt()
-            second = Robot(a1, b1, c1, who.ROBOT)
-        }
-
-        '3' -> {
-            println("Создаем рыцаря!");
-            println("Введите здоровье: ");
-            var a2: Int = readLine()!!.toInt()
-            println("Введите силу атаки: ");
-            var b2: Int = readLine()!!.toInt()
-            println("Введите защиту: ");
-            var c2: Int = readLine()!!.toInt()
-            second = Knight(a2, b2, c2, who.KNIGHT)
-        }
+    var whooo_1:String? = readLine()
+    if (whooo_1=="Маг" || whooo_1=="маг"){who1_1 = '1'};
+    else if (whooo_1=="Робот" || whooo_1=="робот"){who1_1 = '2'};
+    else if (whooo_1=="Рыцарь" || whooo_1=="рыцарь"){who1_1 = '3'};
+    lateinit var second:Human
+    when(who1_1){
+        '1' -> {println("Создаем мага!");
+            println("Введите здоровье: ");var a :Int = readLine()!!.toInt()
+            println("Введите силу атаки: ");var b :Int = readLine()!!.toInt()
+            println("Введите ману: ");var c :Int = readLine()!!.toInt()
+            second = Wizard(a,b,c, who.WIZARD)}
+        '2' -> {println("Создаем робота!");
+            println("Введите здоровье: ");var a1 :Int = readLine()!!.toInt()
+            println("Введите силу атаки: ");var b1 :Int = readLine()!!.toInt()
+            println("Введите батарею: ");var c1 :Int = readLine()!!.toInt()
+            second = Robot(a1,b1,c1,who.ROBOT)}
+        '3' -> {println("Создаем рыцаря!");
+            println("Введите здоровье: ");var a2 :Int = readLine()!!.toInt()
+            println("Введите силу атаки: ");var b2 :Int = readLine()!!.toInt()
+            println("Введите защиту: ");var c2 :Int = readLine()!!.toInt()
+            second = Knight(a2,b2,c2, who.KNIGHT)}
     }
     println("-------------------");
 
     println("Какого персонажа хотите создать(Маг, робот, рыцарь)?")
     var who1_2 = '3'
-    var whooo_2: String? = readLine()
-    if (whooo_2 == "Маг") {
-        who1_2 = '1'
-    } else if (whooo_2 == "Робот") {
-        who1_2 = '2'
-    } else if (whooo_2 == "Рыцарь") {
-        who1_2 = '3'
-    }
-    lateinit var third: Human
-    when (who1_2) {
-        '1' -> {
-            println("Создаем мага!");
-            println("Введите здоровье: ");
-            var a: Int = readLine()!!.toInt()
-            println("Введите силу атаки: ");
-            var b: Int = readLine()!!.toInt()
-            println("Введите ману: ");
-            var c: Int = readLine()!!.toInt()
-            third = Wizard(a, b, c, who.WIZARD)
-        }
-
-        '2' -> {
-            println("Создаем робота!");
-            println("Введите здоровье: ");
-            var a1: Int = readLine()!!.toInt()
-            println("Введите силу атаки: ");
-            var b1: Int = readLine()!!.toInt()
-            println("Введите батарею: ");
-            var c1: Int = readLine()!!.toInt()
-            third = Robot(a1, b1, c1, who.ROBOT)
-        }
-
-        '3' -> {
-            println("Создаем рыцаря!");
-            println("Введите здоровье: ");
-            var a2: Int = readLine()!!.toInt()
-            println("Введите силу атаки: ");
-            var b2: Int = readLine()!!.toInt()
-            println("Введите защиту: ");
-            var c2: Int = readLine()!!.toInt()
-            third = Knight(a2, b2, c2, who.KNIGHT)
-        }
+    var whooo_2:String? = readLine()
+    if (whooo_2=="Маг" || whooo_2=="маг"){who1_2 = '1'}
+    else if (whooo_2=="Робот" || whooo_2=="робот"){who1_2 = '2'}
+    else if (whooo_2=="Рыцарь" || whooo_2=="рыцарь"){who1_2 = '3'}
+    lateinit var third:Human
+    when(who1_2){
+        '1' -> {println("Создаем мага!");
+            println("Введите здоровье: ");var a :Int = readLine()!!.toInt()
+            println("Введите силу атаки: ");var b :Int = readLine()!!.toInt()
+            println("Введите ману: ");var c :Int = readLine()!!.toInt()
+            third = Wizard(a,b,c, who.WIZARD)}
+        '2' -> {println("Создаем робота!");
+            println("Введите здоровье: ");var a1 :Int = readLine()!!.toInt()
+            println("Введите силу атаки: ");var b1 :Int = readLine()!!.toInt()
+            println("Введите батарею: ");var c1 :Int = readLine()!!.toInt()
+            third = Robot(a1,b1,c1, who.ROBOT)}
+        '3' -> {println("Создаем рыцаря!");
+            println("Введите здоровье: ");var a2 :Int = readLine()!!.toInt()
+            println("Введите силу атаки: ");var b2 :Int = readLine()!!.toInt()
+            println("Введите защиту: ");var c2 :Int = readLine()!!.toInt()
+            third = Knight(a2,b2,c2, who.KNIGHT)}
     }
     println("-------------------");
     println("Начинаем сражение!")
 
 
-    while (first.Health > 0 && second.Health > 0 && third.Health > 0) {
+    while (first.Health>0 && second.Health>0 && third.Health>0){
         second.Health -= first.attack()
         second.heal()
-        if (second.Health <= 0) {
-            second.Health = 0
-        }
+        if (second.Health <=0){second.Health = 0}
         print("Первый персонаж атакует второго! Результат - здоровье второго персонажа = ");println(second.Health)
-        if (second.Health <= 0) {
-            break
-        }
+        if (second.Health <=0){break}
 
         third.Health -= second.attack() //;if (second.Health <=0){second.Health=0;}
         third.heal()
-        if (third.Health <= 0) {
-            third.Health = 0
-        }
+        if (third.Health <=0){third.Health=0}
         print("Второй персонаж атакует третьего! Результат - здоровье третьего персонажа = ");println(third.Health)
-        if (third.Health <= 0) {
-            break
-        }
+        if (third.Health <=0){break}
 
         first.Health -= third.attack()
         first.heal()
-        if (first.Health <= 0) {
-            first.Health = 0
-        }
+        if (first.Health <=0){first.Health = 0}
         print("Третий персонаж атакует первого! Результат - здоровье первого персонажа = ");println(first.Health)
-        if (first.Health <= 0) {
-            break
-        }
+        if (first.Health <=0){break}
     }
     println("-------------------");
-    if (first.Health <= 0) {
-        println("Первый персонаж проиграл")
-    }
-    if (second.Health <= 0) {
-        println("Второй персонаж проиграл")
-    }
-    if (third.Health <= 0) {
-        println("Третий персонаж проиграл")
-    }
+    if (first.Health <= 0){println("Первый персонаж проиграл")}
+    if (second.Health <= 0){println("Второй персонаж проиграл")}
+    if (third.Health <= 0){println("Третий персонаж проиграл")}
 }
